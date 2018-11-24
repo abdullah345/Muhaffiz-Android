@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "971932255711",
+    "firebase_url": "https://muhaffiz-6ecf3.firebaseio.com",
+    "project_id": "muhaffiz-6ecf3",
+    "storage_bucket": "muhaffiz-6ecf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971932255711:android:fa04e3812dca5c5e",
+        "android_client_info": {
+          "package_name": "livel.taaus.com.muhaffiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971932255711-f4eqfgu4csn6n1dpkcdjv317ukl0m77u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "livel.taaus.com.muhaffiz",
+            "certificate_hash": "625e45602e2ee2b92a42a38d1497514b43dde4d6"
+          }
+        },
+        {
+          "client_id": "971932255711-rbup53opa1cqhg4r00d9btuahetm67ir.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_j2O4qGDxLjXHxJEJy4lIbBYJXesAQiM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971932255711-rbup53opa1cqhg4r00d9btuahetm67ir.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
