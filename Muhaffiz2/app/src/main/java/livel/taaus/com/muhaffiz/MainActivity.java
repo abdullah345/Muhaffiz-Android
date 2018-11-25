@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import livel.taaus.com.muhaffiz.History.Images;
+
 public class MainActivity extends AppCompatActivity {
     int signincheck=0;
     LinearLayout hist;
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         hist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,History.class);
+                Intent intent=new Intent(MainActivity.this,Images.class);
                 startActivity(intent);
             }
         });
