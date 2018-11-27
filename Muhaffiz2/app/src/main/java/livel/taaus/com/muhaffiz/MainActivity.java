@@ -7,15 +7,17 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import livel.taaus.com.muhaffiz.History.Images;
+import livel.taaus.com.muhaffiz.Wifi.ActivityWifi;
 
 public class MainActivity extends AppCompatActivity {
     int signincheck=0;
-    LinearLayout hist;
+    LinearLayout hist,wifi;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         hist=(LinearLayout)findViewById(R.id.histLinear);
+        wifi=(LinearLayout)findViewById(R.id.wifi);
         hist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
             //Intent i =new Intent(MainActivity.this,Login.class);
             //startActivity(i);
         }
+        wifi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this,ActivityWifi.class);
+                startActivity(intent);
+
+            }
+        });
 
     }
 }
