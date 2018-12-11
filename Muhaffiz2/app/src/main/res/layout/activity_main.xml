@@ -88,7 +88,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="How this app works"
+                    android:text="How throwing action detected"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>
 
@@ -159,13 +159,14 @@
                     android:layout_height="64dp"
                     android:background="@drawable/cerclebackgroundyello"
                     android:padding="10dp"
-                    android:src="@drawable/ic_attach_file_black_24dp" />
+                    android:src="@drawable/bag" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Links"
+                    android:textAlignment="center"
+                    android:text="Abandoned object detection"
                     android:textStyle="bold" />
 
                 <View
@@ -179,7 +180,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:padding="5dp"
-                    android:text="Related Links"
+                    android:text="How we are detecting Abandoned object"
                     android:textColor="@android:color/darker_gray" />
 
             </LinearLayout>

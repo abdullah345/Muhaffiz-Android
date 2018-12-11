@@ -34,4 +34,14 @@
 
     </android.support.v7.widget.RecyclerView>
 
+    <Button
+        android:id="@+id/btnstrt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:text="Start"
+        app:srcCompat="@android:color/holo_orange_light" />
+
 </RelativeLayout>

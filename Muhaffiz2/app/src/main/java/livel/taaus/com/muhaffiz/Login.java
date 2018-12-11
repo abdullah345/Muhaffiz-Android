@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
     private FirebaseAuth mAuth;
-    ImageButton login;
+    ImageButton login,signup;
     EditText email, pass;
 
     @Override
@@ -30,10 +30,17 @@ public class Login extends AppCompatActivity {
         email=(EditText)findViewById(R.id.email);
         pass=(EditText)findViewById(R.id.pass);
         login = (ImageButton) findViewById(R.id.login);
+        signup=(ImageButton)findViewById(R.id.imageButton);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signin();
+            }
+        });
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Signup();
             }
         });
     }
@@ -64,6 +71,30 @@ public class Login extends AppCompatActivity {
                 });
 
     }
+    void Signup(){
+        mAuth.createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString())
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            // Sign in success, update UI with the signed-in user's information
+                            Log.d("", "createUserWithEmail:success");
+                            FirebaseUser user = mAuth.getCurrentUser();
+                            Toast.makeText(Login.this, "User Created Sucessfully",
+                                    Toast.LENGTH_SHORT).show();
+                            updateUI(user);
+                        } else {
+                            // If sign in fails, display a message to the user.
+                            Log.w("", "createUserWithEmail:failure", task.getException());
+                            Toast.makeText(Login.this, "Authentication failed.",
+                                    Toast.LENGTH_SHORT).show();
+                            updateUI(null);
+                        }
+
+                        // ...
+                    }
+                });
+    }
     @Override
     public void onStart() {
         super.onStart();
@@ -74,6 +105,7 @@ public class Login extends AppCompatActivity {
     }
     void updateUI(FirebaseUser user){
         Intent intent=new Intent(Login.this,MainActivity.class);
+        intent.putExtra("Email",email.getText().toString());
         startActivity(intent);
     }
 
